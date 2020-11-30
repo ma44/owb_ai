@@ -1,0 +1,987 @@
+@CAPS_UNDISTURBED = 25
+@CAPS_ISOLATION = 25
+@CAPS_CIV = 25
+@CAPS_LOW_MOB = 20
+@CAPS_PART_MOB = 15
+@CAPS_WAR_MOB = 10
+@CAPS_TOT_MOB = 5
+@CAPS_TRADE_CLOSED = 0
+@CAPS_TRADE_EXPORT = 15
+@CAPS_TRADE_LIMITED = 5
+@CAPS_TRADE_FREE = 20
+@CAPS_NCR_MODIFIER = 0.2
+@CAPS_DENARIUS_MODIFIER = 0.3
+@CAPS_CAP_MODIFIER = 0
+ideas = {
+	economy = {
+		law = yes
+		undisturbed_isolation = {
+			picture = gov_idea_undisturbed_isolation
+			allowed = {
+				always = no
+			}
+			visible = {
+				use_generic_economic_laws = yes
+			}
+			available = {
+				use_generic_economic_laws = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.4
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				generate_wargoal_tension = 1
+				join_faction_tension = 0.2
+				lend_lease_tension = 0.5
+				send_volunteers_tension = 0.2
+				guarantee_tension = 0.75
+				caps_country_base_modifier = 0.35
+			}
+			allowed_to_remove = {
+				if = {
+					limit = {
+						is_ncr_member = yes
+					}
+					OR = {
+						has_completed_focus = ncr_beacon
+						date > 2280.1.1
+						any_enemy_country = {
+							is_major = yes
+							is_not_fantasma_cartel_member = yes
+							OR = {
+								original_tag = CES
+								is_neighbor_of = ROOT
+								is_faction_leader = yes
+							}
+						}
+					}
+				}
+				else = {
+					OR = {
+						has_war_support > 0.5
+						has_war = yes
+					}
+					any_enemy_country = {
+						ic_ratio = {
+							tag = ROOT
+							ratio > 0.2
+						}
+					}
+				}
+			}
+			cancel_if_invalid = no
+		}
+		isolation = {
+			allowed = {
+				always = no
+			}
+			visible = {
+				use_generic_economic_laws = yes
+			}
+			available = {
+				use_generic_economic_laws = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.35
+				production_speed_industrial_complex_factor = -0.4
+				production_speed_arms_factory_factor = -0.4
+				conversion_cost_civ_to_mil_factor = 0.4
+				conversion_cost_mil_to_civ_factor = 0.4
+				generate_wargoal_tension = 1
+				join_faction_tension = 0.2
+				send_volunteers_tension = 0.2
+				guarantee_tension = 0.5
+				caps_country_base_modifier = 0.30
+			}
+			allowed_to_remove = {
+				OR = {
+					has_war_support > 0.6
+					has_war = yes
+				}
+			}
+			cancel_if_invalid = no
+		}
+		scavenging_law = {
+			visible = {
+				use_generic_economic_laws = yes
+			}
+			available = {
+				use_generic_economic_laws = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.4
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				local_resources_factor = 0.2
+				caps_country_base_modifier = 0.25
+			}
+			allowed_to_remove = {
+				OR = {
+					has_war_support > 0.6
+					has_war = yes
+				}
+			}
+			cancel_if_invalid = no
+		}
+		civilian_economy = {
+			visible = {
+				use_generic_economic_laws = yes
+			}
+			available = {
+				use_generic_economic_laws = yes
+			}
+			cost = 100
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.3
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_arms_factory_factor = -0.3
+				conversion_cost_civ_to_mil_factor = 0.3
+				conversion_cost_mil_to_civ_factor = 0.3
+				caps_country_base_modifier = 0.20
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		low_economic_mobilisation = {
+			available = {
+				use_generic_economic_laws = yes
+				OR = {
+					has_war = yes
+					has_war_support > 0.3
+					has_government = ruler
+					has_government = elites
+					has_idea_with_trait = war_monger
+				}
+			}
+			visible = {
+				use_generic_economic_laws = yes
+			}
+			cost = 100
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				caps_country_base_modifier = 0.15
+			}
+			cancel_if_invalid = no
+			#If we're able to do this, chances are we can do partial economic mobilization
+			ai_will_do = {
+				factor = -100000
+			}
+		}
+		partial_economic_mobilisation = {
+			available = {
+				use_generic_economic_laws = yes
+				OR = {
+					has_war_support > 0.5
+					has_government = ruler
+					has_government = elites
+					has_idea_with_trait = war_monger
+					AND = {
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0.2
+							}
+						}
+					}
+				}
+			}
+			visible = {
+				use_generic_economic_laws = yes
+			}
+			cost = 100
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_speed_arms_factory_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				caps_country_base_modifier = 0.10
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 200000
+				modifier = {
+					factor = 20
+					is_major = yes
+				}
+				modifier = {
+					add = 500
+					NOT = {
+						has_war = yes
+						is_raider_nation = yes
+						manpower_per_military_factory > 1000
+					}
+				}
+			}
+		}
+		war_economy = {
+			available = {
+				use_generic_economic_laws = yes
+				threat > 0.6
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = or_clarification_tooltip
+						always = no
+					}
+					AND = {
+						has_war = yes
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0.4
+							}
+						}
+					}
+				}
+			}
+			visible = {
+				use_generic_economic_laws = yes
+			}
+			cost = 100
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_arms_factory_factor = 0.2
+				conversion_cost_civ_to_mil_factor = -0.2
+				conversion_cost_mil_to_civ_factor = -0.
+				caps_country_base_modifier = 0.05
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				#do it
+				factor = 5000000
+				modifier = {
+					#High prio on production
+					factor = 200
+					manpower_per_military_factory > 500
+				}
+			}
+		}
+		tot_economic_mobilisation = {
+			available = {
+				use_generic_economic_laws = yes
+				has_war = yes
+				threat > 0.8
+				any_enemy_country = {
+					ic_ratio = {
+						tag = ROOT
+						ratio > 0.5
+					}
+				}
+			}
+			visible = {
+				use_generic_economic_laws = yes
+			}
+			allowed_to_remove = {
+				if = {
+					limit = { original_tag = TLP }
+					NOT = { has_idea = army_with_a_state }
+				}
+			}
+			ai_will_do = {
+				#yeah just don't
+				factor = -1000000
+			}
+			cost = 100
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+				conscription = -0.03
+				production_speed_arms_factory_factor = 0.3
+				conversion_cost_civ_to_mil_factor = -0.3
+				conversion_cost_mil_to_civ_factor = -0.3
+				caps_country_base_modifier = -0.05
+			}
+			cancel_if_invalid = no
+		}
+		#Purposefully overtuned, since TNK cant core states.
+		#Dont nerf without changing other stuff
+		tnk_scientific_industry = {
+			picture = tnk_scientific_industry
+			cost = 150
+			removal_cost = -1
+			level = 6
+			allowed = {
+				original_tag = TNK
+			}
+			visible = {
+				original_tag = TNK
+			}
+			cost = 100
+			removal_cost = -1
+			modifier = {
+				global_building_slots_factor = 1.5
+				consumer_goods_factor = -0.20 #Dont Nerf
+				production_speed_buildings_factor = 0.2
+				fuel_gain_factor = 0.2
+				country_resource_energy = 60
+				country_resource_circuitry = 60
+				country_resource_water = 60
+				country_resource_composites = 60
+				country_resource_advanced = 60
+				country_resource_metal = 60
+			}
+			cancel_if_invalid = no
+		}
+		ncr_brahmin_economy = {
+			picture = scavenging_law
+			cost = 150
+			removal_cost = -1
+			level = 6
+			allowed = {
+				original_tag = NCR
+			}
+			visible = {
+				original_tag = NCR
+			}
+			allowed_to_remove = {
+				hidden_trigger = {
+					always = no
+				}
+			}
+			cost = 100
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.5
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				consumer_goods_factor = 0.40
+				generate_wargoal_tension = 1
+				join_faction_tension = 0.2
+				send_volunteers_tension = 0.2
+				guarantee_tension = 0.5
+				caps_country_base_modifier = -0.2
+				stability_factor = 0.05
+			}
+			cancel_if_invalid = no
+		}
+		ncr_caravan_protection = {
+			picture = civilian_economy
+			cost = 150
+			removal_cost = -1
+			level = 5
+			allowed = {
+				original_tag = NCR
+			}
+			visible = {
+				original_tag = NCR
+			}
+			allowed_to_remove = {
+				hidden_trigger = {
+					always = no
+				}
+			}
+			cost = 100
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.25
+				conversion_cost_civ_to_mil_factor = 0.25
+				conversion_cost_mil_to_civ_factor = 0.25
+				consumer_goods_factor = 0.30
+				caps_country_base_modifier = -0.1
+				#stability_factor = 0.05
+			}
+			cancel_if_invalid = no
+		}
+		ncr_militarized_economy = {
+			picture = partial_economic_mobilisation
+			cost = 150
+			removal_cost = -1
+			level = 4
+			allowed = {
+				original_tag = NCR
+			}
+			visible = {
+				original_tag = NCR
+			}
+			allowed_to_remove = {
+				hidden_trigger = {
+					always = no
+				}
+			}
+			cost = 100
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				conversion_cost_civ_to_mil_factor = -0.05
+				conversion_cost_mil_to_civ_factor = -0.05
+				consumer_goods_factor = 0.20
+				caps_country_base_modifier = 0.1
+				stability_factor = -0.05
+			}
+			cancel_if_invalid = no
+		}
+	}
+	trade_laws = {
+		law = yes
+		free_trade = {
+			visible = {
+				use_generic_trade_laws = yes
+			}
+			available = {
+				use_generic_trade_laws = yes
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				min_export = 0.5
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.1
+				civilian_intel_to_others = 40.0
+				navy_intel_to_others = 40.0
+				army_intel_to_others = 20.0
+				caps_country_trade_modifier = 0.30
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_war = no
+					check_variable = {
+						resource@metal > 5
+					}
+					check_variable = {
+						resource@circuitry > 5
+					}
+					check_variable = {
+						resource@energy > 5
+					}
+					check_variable = {
+						resource@advanced > 5
+					}
+					add = 100
+				}
+			}
+		}
+		export_focus = {
+			visible = {
+				use_generic_trade_laws = yes
+			}
+			available = {
+				use_generic_trade_laws = yes
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				min_export = 0.35
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				civilian_intel_to_others = 20.0
+				navy_intel_to_others = 20.0
+				army_intel_to_others = 10.0
+				caps_country_trade_modifier = 0.20
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_war = no
+					check_variable = {
+						resource@metal > 1
+					}
+					check_variable = {
+						resource@circuitry > 1
+					}
+					add = 999
+				}
+			}
+		}
+		limited_exports = {
+			visible = {
+				use_generic_trade_laws = yes
+			}
+			available = {
+				OR = {
+					AND = {
+						has_war = yes
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0.2
+							}
+						}
+					}
+				}
+				use_generic_trade_laws = yes
+			}
+			default = yes
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				min_export = 0.25
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.01
+				civilian_intel_to_others = 10.0
+				navy_intel_to_others = 10.0
+				army_intel_to_others = 5.0
+				caps_country_trade_modifier = 0.10
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					factor = 0
+					is_major = yes
+					is_in_faction = yes
+					has_war = yes
+					NOT = {
+						has_idea = closed_economy
+					}
+					OR = {
+						composites < 4
+						metal < 4
+						water < 4
+						energy < 4
+						circuitry < 4
+						advanced < 4
+					}
+					add = 1000000
+				}
+			}
+		}
+		closed_economy = {
+			visible = {
+				use_generic_trade_laws = yes
+			}
+			available = {
+				has_war = yes
+				OR = {
+					has_idea = war_economy
+					has_idea = tot_economic_mobilisation
+				}
+				OR = {
+					NOT = {
+						tag = NCR
+					}
+				}
+				use_generic_trade_laws = yes
+			}
+			allowed_to_remove = {
+				if = {
+					limit = {
+						original_tag = TNK
+					}
+					always = no
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				min_export = 0
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					factor = 0
+					is_major = yes
+					is_in_faction = yes
+					has_war = yes
+					OR = {
+						composites < 4
+						metal < 4
+						water < 4
+						energy < 4
+						circuitry < 4
+						advanced < 4
+					}
+					add = 1000000
+				}
+			}
+		}
+	}
+	hidden_ideas = {
+		currencygenericcap = {
+			picture = gov_idea_bottle_cap
+			cost = 150
+			removal_cost = -1
+			available = {
+			}
+			modifier = {
+				caps_flat_income_modifier = 10
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				base = 1
+			}
+		}
+		currencycesdenarius = {
+			picture = gov_idea_legion_denarius
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				caps_flat_income_modifier = 5
+				caps_income_modifier = -0.18
+				caps_expense_modifier = -0.23
+			}
+
+			cancel_if_invalid = no
+		}
+		currencyncrdollar = {
+			picture = gov_idea_ncr_dollar
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				caps_flat_income_modifier = 3
+			}
+			cancel_if_invalid = no
+		}
+		currencycad = {
+			picture = gov_idea_bottle_cap
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				caps_flat_income_modifier = 5
+			}
+			cancel_if_invalid = no
+		}
+		currencyusd = {
+			picture = gov_idea_USD
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+			}
+			cancel_if_invalid = no
+		}
+		currencypeso = {
+			picture = gov_idea_peso
+
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				caps_flat_income_modifier = 12
+			}
+			cancel_if_invalid = no
+		}
+		currencytexdollar = {
+			#picture = gov_idea_texdollar
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.01
+				local_resources_factor = 0.03
+				caps_flat_income_modifier = 11
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+	army_wages_laws = {
+		law = yes
+		mothballed_divisions = {
+			picture = mothballed_divisions_icon
+			allowed = {
+				NOT = { has_country_flag = army_wages_disabled }
+			}
+			visible = {
+				NOT = { has_country_flag = army_wages_disabled }
+			}
+			removal_cost = -1
+			cost = 0
+			available = {
+				custom_trigger_tooltip = {
+					NOT = {
+						has_country_flag = {
+							flag = caps_military_wage_lockout
+							value = 1
+						}
+					}
+					tooltip = caps_army_wages_lockout_tt
+				}
+			}
+			on_add = {
+				set_country_flag = {
+					flag = caps_military_wage_lockout
+					value = 1
+					days = 140
+				}
+				custom_effect_tooltip = caps_lockout_set_tt
+			}
+			modifier = {
+				caps_expense_modifier = -0.9
+				army_attack_factor = -0.225
+				army_org_factor = -0.585
+				army_morale_factor = -0.405
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				base = 1
+			}
+		}
+		national_guard = {
+			picture = national_guard_icon
+			allowed = {
+				NOT = { has_country_flag = army_wages_disabled }
+			}
+			visible = {
+				NOT = { has_country_flag = army_wages_disabled }
+			}
+			removal_cost = -1
+			cost = 0
+			available = {
+				custom_trigger_tooltip = {
+					NOT = {
+						has_country_flag = {
+							flag = caps_military_wage_lockout
+							value = 1
+						}
+					}
+					tooltip = caps_army_wages_lockout_tt
+				}
+			}
+			on_add = {
+				set_country_flag = {
+					flag = caps_military_wage_lockout
+					value = 1
+					days = 140
+				}
+				custom_effect_tooltip = caps_lockout_set_tt
+			}
+			modifier = {
+				caps_expense_modifier = -0.54
+				army_attack_factor = -0.135
+				army_org_factor = -0.351
+				army_morale_factor = -0.243
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				base = 1
+			}
+		}
+		standard_military = {
+			picture = army_standard_icon
+			visible = {
+
+			}
+			allowed = {
+				AND = {
+					NOT = {
+						is_brotherhood_nation = yes
+						is_super_mutant_nation = yes
+					}
+					NOT = { has_country_flag = army_wages_disabled }
+				}
+			}
+			removal_cost = -1
+			cost = 0
+			default = yes
+			available = {
+				custom_trigger_tooltip = {
+					NOT = {
+						has_country_flag = {
+							flag = caps_military_wage_lockout
+							value = 1
+						}
+					}
+					tooltip = caps_army_wages_lockout_tt
+					hidden_trigger = {
+						NOT = { has_country_flag = army_wages_disabled }
+					}
+				}
+			}
+			modifier = {
+				caps_expense_modifier = 0
+				army_attack_factor = 0
+				army_org_factor = 0
+				army_morale_factor = 0
+			}
+			on_add = {
+				set_country_flag = {
+					flag = caps_military_wage_lockout
+					value = 1
+					days = 140
+				}
+				custom_effect_tooltip = caps_lockout_set_tt
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+		family_stipend = {
+			picture = family_stipend_icon
+			allowed = {
+				NOT = { has_country_flag = army_wages_disabled }
+			}
+			visible = {
+				NOT = { has_country_flag = army_wages_disabled }
+			}
+			removal_cost = -1
+			cost = 0
+			available = {
+				custom_trigger_tooltip = {
+					NOT = {
+						has_country_flag = {
+							flag = caps_military_wage_lockout
+							value = 1
+						}
+					}
+					tooltip = caps_army_wages_lockout_tt
+				}
+			}
+			on_add = {
+				set_country_flag = {
+					flag = caps_military_wage_lockout
+					value = 1
+					days = 140
+				}
+				custom_effect_tooltip = caps_lockout_set_tt
+			}
+			modifier = {
+				caps_expense_modifier = 0.175
+				army_attack_factor = 0
+				army_org_factor = 0.115
+				army_morale_factor = 0.078
+				experience_gain_army_factor = 0.075
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				base = 1
+			}
+		}
+		lifetime_pension = {
+			picture = lifetime_pension_icon
+			allowed = {
+				NOT = { has_country_flag = army_wages_disabled }
+			}
+			visible = {
+				NOT = { has_country_flag = army_wages_disabled }
+			}
+			removal_cost = -1
+			cost = 0
+			available = {
+				custom_trigger_tooltip = {
+					NOT = {
+						has_country_flag = {
+							flag = caps_military_wage_lockout
+							value = 1
+						}
+					}
+					tooltip = caps_army_wages_lockout_tt
+				}
+			}
+			on_add = {
+				set_country_flag = {
+					flag = caps_military_wage_lockout
+					value = 1
+					days = 140
+				}
+				custom_effect_tooltip = caps_lockout_set_tt
+			}
+			modifier = {
+				caps_expense_modifier = 0.35
+				army_attack_factor = 0
+				army_org_factor = 0.227
+				army_morale_factor = 0.157
+				experience_gain_army_factor = 0.15
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				base = 1
+			}
+		}
+		mutant_wages_law = {
+			picture = gov_idea_bottle_cap
+			visible = {
+				OR = {
+					has_country_flag = army_wages_disabled
+					is_super_mutant_nation = yes
+				}
+			}
+			allowed = {
+				OR = {
+					has_country_flag = army_wages_disabled
+					is_super_mutant_nation = yes
+				}
+			}
+			removal_cost = -1
+			cost = 0
+			available = {
+				custom_trigger_tooltip = {
+					NOT = {
+						has_country_flag = {
+							flag = caps_military_wage_lockout
+							value = 1
+						}
+					}
+					tooltip = caps_army_wages_lockout_tt
+				}
+				has_country_flag = army_wages_disabled
+				is_super_mutant_nation = yes
+			}
+			modifier = {
+				caps_income_modifier = -0.75
+				caps_expense_modifier = -0.95
+			}
+			ai_will_do = {
+				base = 1
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		brotherhood_wages_law = {
+			picture = gov_idea_bottle_cap
+			visible = {
+				OR = {
+					has_country_flag = army_wages_disabled
+					is_brotherhood_nation = yes
+				}
+			}
+			allowed = {
+				OR = {
+					has_country_flag = army_wages_disabled
+					is_brotherhood_nation = yes
+				}
+			}
+			removal_cost = -1
+			cost = 0
+			available = {
+				custom_trigger_tooltip = {
+					NOT = {
+						has_country_flag = {
+							flag = caps_military_wage_lockout
+							value = 1
+						}
+					}
+					tooltip = caps_army_wages_lockout_tt
+				}
+				has_country_flag = army_wages_disabled
+				is_brotherhood_nation = yes
+			}
+			modifier = {
+				caps_income_modifier = -0.5
+				caps_expense_modifier = -0.66
+				caps_node_trade_modifier = -0.5
+				caps_flat_income_modifier = 4.0
+			}
+			ai_will_do = {
+				base = 1
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+	}
+}
+
+# vim: set ft=pdx ts=2 sw=2 tw=79 :
