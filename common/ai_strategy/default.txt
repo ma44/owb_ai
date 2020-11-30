@@ -175,7 +175,7 @@ default_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = 50
+		value = 75
 	}
 	ai_strategy = {
 		type = role_ratio
@@ -210,7 +210,7 @@ default_unit_production = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = infantry
-		value = 25
+		value = 50
 	}
 	#ai_strategy = {
 	#	type = equipment_production_factor
@@ -520,6 +520,46 @@ save_admiral_pp_for_later = {
 		value = -100
 	}
 }
+
+# Generic saving up of political power; mainly for activating multiple decisions at once or saving 150 pp for army/economy law instead of spending 100 pp on an advisor
+
+bank_some_pp = {
+
+	enable = {
+		has_political_power < 200
+	}
+
+	abort = {
+		has_political_power > 200
+	}
+
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = -9999
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = idea
+		value = -9999
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = general
+		value = -9999
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = admiral
+		value = -9999
+	}
+
+}
+
 
 # Do not waste PP stuff
 do_not_waste_pp_if_saving_for_manpower_laws = {
