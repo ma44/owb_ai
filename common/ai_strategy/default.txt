@@ -652,19 +652,58 @@ addintelligence_agency_normal_upgrade_prio = {
 	}
 }
 
-ask_foreign_manpower_as_major = {
+build_up_civilians = {
+	allowed = {
+		NOT = {
+			tag = LAC # lanius wants to do some conquesting, not civilian industry
+		}
+
+	}
 	enable = {
-		is_major = yes
-		garrison_manpower_need > 200000
+		date < 2277.6.1
 	}
 
-	abort = {
-		garrison_manpower_need < 100000
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 1500
+	}
+}
+
+#We want straight up military factories everywhere
+build_up_militaries = {
+	enable = {
+		OR = {
+			date > 2277.6.1
+			tag = LAC
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 9999
+	}
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 25 #should be 75:25 mil:civ ratio
+	}
+
+}
+
+ask_foreign_manpower = {
+	enable = {
+		garrison_manpower_need > 1000
 	}
 
 	ai_strategy = {
 		type = asking_foreign_garrison
-		value = 100
+		value = 200
 		# id = ITA # id is optionnal. If it is filled, the value will just apply for this country. If not, the value will apply for all countries.
 	}
 }
