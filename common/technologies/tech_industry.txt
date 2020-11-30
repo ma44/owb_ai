@@ -73,7 +73,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 10000
 		}
 
 		categories = {
@@ -114,19 +114,15 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 10
+				factor = -100000
 				date > "2275.1.1"
 			}
 			modifier = {
-				factor = 10
-				date > "2276.1.1"
-			}
-			modifier = {
-				factor = 2
+				factor = -1000000
 				has_tech = tools_tech_level_settler
 			}
 			modifier = {
-				factor = 2
+				factor = 10000000
 				has_tech = tools_tech_level_scientific
 			}
 			modifier = {
@@ -168,25 +164,9 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000000
 			modifier = {
-				factor = 10
-				date > "2276.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2277.1.1"
-			}
-			modifier = {
-				factor = 2
-				has_tech = tools_tech_level_settler
-			}
-			modifier = {
-				factor = 2
-				has_tech = tools_tech_level_scientific
-			}
-			modifier = {
-				factor = 0
+				factor = -10000000
 				has_tech = scavtool_engineering_1
 			}
 		}
@@ -226,25 +206,9 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000000
 			modifier = {
-				factor = 10
-				date > "2277.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2278.1.1"
-			}
-			modifier = {
-				factor = 2
-				has_tech = tools_tech_level_settler
-			}
-			modifier = {
-				factor = 2
-				has_tech = tools_tech_level_scientific
-			}
-			modifier = {
-				factor = 0
+				factor = -10000000
 				has_tech = scavtool_engineering_1
 			}
 		}
@@ -281,25 +245,9 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000000
 			modifier = {
-				factor = 10
-				date > "2278.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2279.1.1"
-			}
-			modifier = {
-				factor = 2
-				has_tech = tools_tech_level_settler
-			}
-			modifier = {
-				factor = 2
-				has_tech = tools_tech_level_scientific
-			}
-			modifier = {
-				factor = 0
+				factor = -10000000
 				has_tech = scavtool_engineering_1
 			}
 		}
@@ -336,25 +284,9 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000000
 			modifier = {
-				factor = 10
-				date > "2280.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2281.1.1"
-			}
-			modifier = {
-				factor = 2
-				has_tech = tools_tech_level_settler
-			}
-			modifier = {
-				factor = 2
-				has_tech = tools_tech_level_scientific
-			}
-			modifier = {
-				factor = 0
+				factor = -10000000
 				has_tech = scavtool_engineering_1
 			}
 		}
@@ -386,25 +318,9 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000000
 			modifier = {
-				factor = 10
-				date > "2281.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2282.1.1"
-			}
-			modifier = {
-				factor = 2
-				has_tech = tools_tech_level_settler
-			}
-			modifier = {
-				factor = 2
-				has_tech = tools_tech_level_scientific
-			}
-			modifier = {
-				factor = 0
+				factor = -10000000
 				has_tech = scavtool_engineering_1
 			}
 		}
@@ -447,23 +363,15 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 10
+				factor = 1000000
 				date > "2275.1.1"
 			}
 			modifier = {
-				factor = 10
-				date > "2276.1.1"
-			}
-			modifier = {
-				factor = 0
-				has_tech = tools_tech_level_settler
-			}
-			modifier = {
-				factor = 0
+				factor = -10000000
 				has_tech = tools_tech_level_scientific
 			}
 			modifier = {
-				factor = 0
+				factor = -10000000
 				has_tech = maketool_engineering_1
 			}
 		}
@@ -502,23 +410,11 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 10
-				date > "2276.1.1"
+				factor = 1000000
+				date > "2275.1.1"
 			}
 			modifier = {
-				factor = 10
-				date > "2277.1.1"
-			}
-			modifier = {
-				factor = 0
-				has_tech = tools_tech_level_settler
-			}
-			modifier = {
-				factor = 0
-				has_tech = tools_tech_level_scientific
-			}
-			modifier = {
-				factor = 0
+				factor = -10000000
 				has_tech = maketool_engineering_1
 			}
 		}
@@ -552,23 +448,11 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 10
-				date > "2277.1.1"
+				factor = 1000000
+				date > "2275.1.1"
 			}
 			modifier = {
-				factor = 10
-				date > "2278.1.1"
-			}
-			modifier = {
-				factor = 0
-				has_tech = tools_tech_level_settler
-			}
-			modifier = {
-				factor = 0
-				has_tech = tools_tech_level_scientific
-			}
-			modifier = {
-				factor = 0
+				factor = -10000000
 				has_tech = maketool_engineering_1
 			}
 		}
@@ -616,7 +500,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 1000000
 		}
 
 		ai_research_weights = {
@@ -658,16 +542,9 @@ technologies = {
 			tribal_tech_category
 		}
 
+		# Let's just not do this, the other path is better
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				date > "2275.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2276.1.1"
-			}
+			factor = -10000000
 		}
 
 		ai_research_weights = {
@@ -994,15 +871,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				date > "2275.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2276.1.1"
-			}
+			factor = 10000000
 		}
 
 		ai_research_weights = {
@@ -1040,15 +909,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				date > "2276.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2277.1.1"
-			}
+			factor = 10000000
 		}
 
 		ai_research_weights = {
@@ -1087,15 +948,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				date > "2277.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2278.1.1"
-			}
+			factor = 10000000
 		}
 
 		ai_research_weights = {
@@ -1134,15 +987,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				date > "2278.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2279.1.1"
-			}
+			factor = 10000000
 		}
 
 		ai_research_weights = {
@@ -1181,15 +1026,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				date > "2280.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2281.1.1"
-			}
+			factor = 10000000
 		}
 
 		ai_research_weights = {
@@ -1228,15 +1065,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				date > "2281.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2282.1.1"
-			}
+			factor = 10000000
 		}
 
 		ai_research_weights = {
@@ -1270,15 +1099,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				date > "2282.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "2283.1.1"
-			}
+			factor = 10000000
 		}
 
 		ai_research_weights = {
@@ -1312,35 +1133,9 @@ technologies = {
 			tribal_tech_category
 		}
 
+		# Stockpiling excess resources early on is always goods
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				date < "2275.1.1"
-			}
-			modifier = {
-				factor = 5.0
-				OR = {
-					composites > 4
-					metal > 4
-					water > 4
-					energy > 4
-					circuitry > 4
-					advanced > 4
-				}
-			}
-
-			modifier = {
-				factor = 1.5
-				OR = {
-					composites > 8
-					metal > 8
-					water > 8
-					energy > 8
-					circuitry > 8
-					advanced > 8
-				}
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1372,34 +1167,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				date < "2276.1.1"
-			}
-			modifier = {
-				factor = 5.0
-				OR = {
-					composites > 4
-					metal > 4
-					water > 4
-					energy > 4
-					circuitry > 4
-					advanced > 4
-				}
-			}
-
-			modifier = {
-				factor = 1.5
-				OR = {
-					composites > 8
-					metal > 8
-					water > 8
-					energy > 8
-					circuitry > 8
-					advanced > 8
-				}
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1431,34 +1199,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				date < "2277.1.1"
-			}
-			modifier = {
-				factor = 5.0
-				OR = {
-					composites > 4
-					metal > 4
-					water > 4
-					energy > 4
-					circuitry > 4
-					advanced > 4
-				}
-			}
-
-			modifier = {
-				factor = 1.5
-				OR = {
-					composites > 8
-					metal > 8
-					water > 8
-					energy > 8
-					circuitry > 8
-					advanced > 8
-				}
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1490,34 +1231,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				date < "2280.1.1"
-			}
-			modifier = {
-				factor = 5.0
-				OR = {
-					composites > 4
-					metal > 4
-					water > 4
-					energy > 4
-					circuitry > 4
-					advanced > 4
-				}
-			}
-
-			modifier = {
-				factor = 1.5
-				OR = {
-					composites > 8
-					metal > 8
-					water > 8
-					energy > 8
-					circuitry > 8
-					advanced > 8
-				}
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1544,34 +1258,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				date < "2281.1.1"
-			}
-			modifier = {
-				factor = 5.0
-				OR = {
-					composites > 4
-					metal > 4
-					water > 4
-					energy > 4
-					circuitry > 4
-					advanced > 4
-				}
-			}
-
-			modifier = {
-				factor = 1.5
-				OR = {
-					composites > 8
-					metal > 8
-					water > 8
-					energy > 8
-					circuitry > 8
-					advanced > 8
-				}
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1642,11 +1329,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 50
-				date > "2275.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1685,11 +1368,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 50
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1728,11 +1407,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 50
-				date > "2277.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1772,11 +1447,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 50
-				date > "2280.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1815,11 +1486,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 50
-				date > "2281.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1850,11 +1517,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 50
-				date > "2282.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -2399,13 +2062,9 @@ technologies = {
 			name = fallout_industry_folder
 			position = { x = @Row_17 y = @Col_1 }
 		}
-
+		#We still want some energy, just not as highly prioritized as the other industrial techs
 		ai_will_do = {
-			factor = 0.2
-			modifier = {
-				factor = 2
-				date > "2276.1.1"
-			}
+			factor = 100000
 		}
 
 		categories = {
@@ -2440,11 +2099,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.2
-			modifier = {
-				factor = 2
-				date > "2277.1.1"
-			}
+			factor = 100000
 		}
 
 		categories = {
@@ -2479,11 +2134,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.2
-			modifier = {
-				factor = 2
-				date > "2278.1.1"
-			}
+			factor = 100000
 		}
 
 		categories = {
@@ -2518,11 +2169,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.2
-			modifier = {
-				factor = 2
-				date > "2279.1.1"
-			}
+			factor = 100000
 		}
 
 		categories = {
@@ -2552,11 +2199,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.2
-			modifier = {
-				factor = 2
-				date > "2282.1.1"
-			}
+			factor = 100000
 		}
 
 		categories = {
