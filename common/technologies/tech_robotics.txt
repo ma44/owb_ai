@@ -122,10 +122,11 @@ technologies = {
 			position = { x = @Row_1 y = @Col_2 }
 		}
 
+		#We still want the efficiency cap bonus from before, but us researching this makes the AI focus more on armor/robots significantly more so let's just not have that
 		ai_will_do = {
-			factor = 1
+			factor = -100000
 			modifier = {
-				factor = 2
+				factor = 1000000
 				has_country_flag = robot_doctrine_ai
 			}
 			modifier = {

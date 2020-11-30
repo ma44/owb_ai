@@ -95,11 +95,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -322,11 +318,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -358,11 +350,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -394,11 +382,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -476,11 +460,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -555,11 +535,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -600,11 +576,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -685,11 +657,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -720,11 +688,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -754,11 +718,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -839,11 +799,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -875,11 +831,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -917,11 +869,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -963,11 +911,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1000,11 +944,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1045,11 +985,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1128,11 +1064,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1196,11 +1128,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1238,11 +1166,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1393,11 +1317,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1429,11 +1349,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			factor = 1000000
 		}
 	}
 }

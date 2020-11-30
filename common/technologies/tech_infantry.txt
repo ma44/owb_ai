@@ -536,7 +536,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 10000000
 			modifier = {
 				factor = 0
 				is_researching_technology = melee_weaponry_tech_1
@@ -594,7 +594,7 @@ technologies = {
 		ai_will_do = {
 			factor = 3
 			modifier = {
-				factor = 10
+				factor = 1000000
 				date > "2279.1.1"
 			}
 			modifier = {
@@ -662,12 +662,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-
-			modifier = {
-				factor = 10
-				date > "2281.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -709,12 +704,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-
-			modifier = {
-				factor = 10
-				date > "2282.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -755,22 +745,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.8
-
-			modifier = {
-				factor = 2
-				date > "2282.1.9"
-			}
-
-			modifier = {
-				factor = 2
-				date > "2283.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "2284.1.6"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -812,22 +787,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.8
-
-			modifier = {
-				factor = 2
-				date > "2283.1.9"
-			}
-
-			modifier = {
-				factor = 2
-				date > "2284.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "2285.1.6"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -862,22 +822,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.8
-
-			modifier = {
-				factor = 2
-				date > "2286.1.9"
-			}
-
-			modifier = {
-				factor = 2
-				date > "2287.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "2288.1.6"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -927,11 +872,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 10
-				date > "2277.1.1"
-			}
+			factor = 1000000
 			modifier = {
 				factor = 0
 				is_researching_technology = melee_weaponry_tech_2
@@ -988,11 +929,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 10
-				date > "2279.1.1"
-			}
+			factor = 1000000
 			modifier = {
 				factor = 0
 				is_researching_technology = energy_weaponry_tech_1
@@ -1048,11 +985,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 10
-				date > "2281.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1094,11 +1027,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 10
-				date > "2280.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1139,22 +1068,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.8
-
-			modifier = {
-				factor = 2
-				date > "2282.1.9"
-			}
-
-			modifier = {
-				factor = 2
-				date > "2283.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "2284.1.6"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1196,22 +1110,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.8
-
-			modifier = {
-				factor = 2
-				date > "2284.1.9"
-			}
-
-			modifier = {
-				factor = 2
-				date > "2285.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "2286.1.6"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1247,22 +1146,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.8
-
-			modifier = {
-				factor = 2
-				date > "2286.1.9"
-			}
-
-			modifier = {
-				factor = 2
-				date > "2287.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "2288.1.6"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1306,11 +1190,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 10
-				tag = CES
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1352,12 +1232,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-
-			modifier = {
-				factor = 10
-				tag = CES
-			}
+			factor = 1000000
 			modifier = {
 				factor = 0
 				is_researching_technology = ballistic_weaponry_tech_1
@@ -1369,10 +1244,6 @@ technologies = {
 			modifier = {
 				factor = 0
 				has_tech = ballistic_weaponry_tech_1
-			}
-			modifier = {
-				factor = 10
-				date > "2277.1.1"
 			}
 		}
 	}
@@ -1418,16 +1289,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-
-			modifier = {
-				factor = 10
-				tag = CES
-			}
-			modifier = {
-				factor = 10
-				date > "2279.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
@@ -1464,16 +1326,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-
-			modifier = {
-				factor = 10
-				tag = CES
-			}
-			modifier = {
-				factor = 10
-				date > "2279.1.1"
-			}
+			factor = 1000000
 		}
 	}
 
